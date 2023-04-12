@@ -17,11 +17,11 @@ public class P_1 : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(-0.05f, 0f, 0f);
+            transform.Translate(-0.0305f, 0f, 0f);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(0.05f, 0f, 0f);
+            transform.Translate(0.0305f, 0f, 0f);
         }
         jump();
     }
@@ -29,7 +29,9 @@ public class P_1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow) && isTERRA)
         {
-            rig.AddForce(Vector2.up * 10f, ForceMode2D.Impulse);
+            Debug.Log("wud");
+            rig.AddForce(Vector2.up * 550f, ForceMode2D.Force);
+            rig.AddForce(Vector2.up * 100f, ForceMode2D.Force);
             isTERRA = false;
         }
     }
@@ -38,6 +40,7 @@ public class P_1 : MonoBehaviour
         if (collision.gameObject.CompareTag("TERRA"))
         {
             isTERRA = true;
+            Debug.Log("qwd");
         }
         
     }
