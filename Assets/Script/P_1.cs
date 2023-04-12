@@ -29,7 +29,7 @@ public class P_1 : MonoBehaviour
     }
     private void jump()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isTERRA)
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space) && isTERRA)
         {
             rig.AddForce(Vector2.up * 550f, ForceMode2D.Force);
             rig.AddForce(Vector2.up * 100f, ForceMode2D.Force);
@@ -42,7 +42,7 @@ public class P_1 : MonoBehaviour
         {
             isTERRA = true;
         }
-        if (collision.gameObject.tag == "Arrow")
+        if (collision.gameObject.tag == "Arrow" || collision.gameObject.tag == "Narak")
         {
             Destroy(gameObject);
             DM.text = "DEAD";

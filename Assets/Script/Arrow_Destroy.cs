@@ -17,7 +17,7 @@ public class Arrow_Destroy : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "TERRA")
+        if (collision.gameObject.tag == "TERRA" || collision.gameObject.tag == "Narak")
         {
             Destroy(gameObject);
         }
