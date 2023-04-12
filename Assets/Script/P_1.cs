@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class P_1 : MonoBehaviour
 {
     Rigidbody2D rig;
     private bool isTERRA = true;
+    [SerializeField] TextMeshProUGUI DM;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,6 @@ public class P_1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow) && isTERRA)
         {
-            Debug.Log("wud");
             rig.AddForce(Vector2.up * 550f, ForceMode2D.Force);
             rig.AddForce(Vector2.up * 100f, ForceMode2D.Force);
             isTERRA = false;
@@ -40,8 +41,11 @@ public class P_1 : MonoBehaviour
         if (collision.gameObject.CompareTag("TERRA"))
         {
             isTERRA = true;
-            Debug.Log("qwd");
         }
-        
+        if (collision.gameObject.tag == "Arrow")
+        {
+            Destroy(gameObject);
+            DM.text = "DEAD";
+        }
     }
 }
