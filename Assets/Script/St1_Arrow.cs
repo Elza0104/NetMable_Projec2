@@ -27,14 +27,14 @@ public class St1_Arrow : MonoBehaviour
     void Shoot()
     {
         GameObject Arrow = Instantiate(Arrow_Prefab);
-        Arrow.transform.position = MPos.position;
+        Arrow.transform.position = new Vector3(MPos.position.x, 10, MPos.position.z);
         isshoot = false;
         StartCoroutine("Shootis");
     }
     IEnumerator Shootis()
     {
         text.text = "Arrow - Loading";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         text.text = "Arrow - Load";
         isshoot = true;
     }

@@ -7,6 +7,8 @@ TagManager:
   - TERRA
   - Arrow
   - Narak
+  - Goal
+  - P_1
   layers:
   - Default
   - TransparentFX

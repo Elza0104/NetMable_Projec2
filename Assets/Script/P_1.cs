@@ -7,7 +7,12 @@ public class P_1 : MonoBehaviour
 {
     Rigidbody2D rig;
     private bool isTERRA = true;
-    [SerializeField] TextMeshProUGUI DM;
+    [SerializeField] TextMeshProUGUI text;
+    [SerializeField] GameObject Goal;
+    [SerializeField] GameObject grave;
+    [SerializeField] Transform grave_Pos;
+    int i;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +22,11 @@ public class P_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SelfMove();
+        jump();
+    }
+    void SelfMove()
+    {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(-0.0305f, 0f, 0f);
@@ -25,11 +35,18 @@ public class P_1 : MonoBehaviour
         {
             transform.Translate(0.0305f, 0f, 0f);
         }
-        jump();
+    }
+    void left()
+    {
+        transform.Translate(-0.0305f, 0f, 0f);
+    }
+    void right()
+    {
+        transform.Translate(0.0305f, 0f, 0f);
     }
     private void jump()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space) && isTERRA)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isTERRA || Input.GetKeyDown(KeyCode.Space) && isTERRA)
         {
             rig.AddForce(Vector2.up * 550f, ForceMode2D.Force);
             rig.AddForce(Vector2.up * 100f, ForceMode2D.Force);
@@ -45,7 +62,31 @@ public class P_1 : MonoBehaviour
         if (collision.gameObject.tag == "Arrow" || collision.gameObject.tag == "Narak")
         {
             Destroy(gameObject);
-            DM.text = "DEAD";
+            text.text = "Success";
+        }
+        if (collision.gameObject.tag == "Goal")
+        {
+            text.text = "Failed";
+            Destroy(Goal);
+            Gooal();
+            Destroy(gameObject);
+        }
+    }
+    void Gooal()
+    {
+        GameObject Dead = Instantiate(grave);
+        Dead.transform.position = grave_Pos.position;
+    }
+    IEnumerator Stage1Move()
+    {
+        text.text = "3";
+        yield return new WaitForSeconds(1f);
+        text.text = "2";
+        yield return new WaitForSeconds(1f);
+        text.text = "1";
+        for (; ; new WaitForSeconds(1f))
+        {
+
         }
     }
 }
