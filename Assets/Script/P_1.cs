@@ -76,6 +76,7 @@ public class P_1 : MonoBehaviour
     {
         GameObject Dead = Instantiate(grave);
         Dead.transform.position = grave_Pos.position;
+        text.text = "Player 1 WIN";
     }
     IEnumerator Stage1Move()
     {

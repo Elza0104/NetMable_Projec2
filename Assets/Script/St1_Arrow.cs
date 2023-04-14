@@ -27,7 +27,7 @@ public class St1_Arrow : MonoBehaviour
     void Shoot()
     {
         GameObject Arrow = Instantiate(Arrow_Prefab);
-        Arrow.transform.position = new Vector3(MPos.position.x, 10, MPos.position.z);
+        Arrow.transform.position = new Vector3(MPos.position.x, 15, MPos.position.z);
         isshoot = false;
         StartCoroutine("Shootis");
     }
