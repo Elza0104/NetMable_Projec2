@@ -9,6 +9,8 @@ TagManager:
   - Narak
   - Goal
   - P_1
+  - TERRA_Trap
+  - M_Pos
   layers:
   - Default
   - TransparentFX

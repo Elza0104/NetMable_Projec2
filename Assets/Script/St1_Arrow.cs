@@ -8,12 +8,15 @@ public class St1_Arrow : MonoBehaviour
     [SerializeField] GameObject Arrow_Prefab;
     [SerializeField] Transform MPos;
     [SerializeField] TextMeshProUGUI text;
-    private bool isshoot = true;
-
+    public static bool isshoot = true;
+    public static St1_Arrow Instance;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+        }
     }
 
     // Update is called once per frame
@@ -37,5 +40,9 @@ public class St1_Arrow : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         text.text = "Arrow - Load";
         isshoot = true;
+    }
+    public static void isOnOff()
+    {
+        isshoot = false;
     }
 }

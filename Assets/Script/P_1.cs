@@ -7,19 +7,17 @@ public class P_1 : MonoBehaviour
 {
     Rigidbody2D rig;
     private bool isTERRA = true;
+    [SerializeField] GameObject arrow;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] GameObject Goal;
     [SerializeField] GameObject grave;
     [SerializeField] Transform grave_Pos;
-    int i;
-
-    // Start is called before the first frame update
+    [SerializeField] TextMeshProUGUI load;
+    [SerializeField] GameObject trap;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         SelfMove();
@@ -35,14 +33,6 @@ public class P_1 : MonoBehaviour
         {
             transform.Translate(0.0305f, 0f, 0f);
         }
-    }
-    void left()
-    {
-        transform.Translate(-0.0305f, 0f, 0f);
-    }
-    void right()
-    {
-        transform.Translate(0.0305f, 0f, 0f);
     }
     private void jump()
     {
@@ -70,6 +60,8 @@ public class P_1 : MonoBehaviour
             Destroy(Goal);
             Gooal();
             Destroy(gameObject);
+            Destroy(load);
+            St1_Arrow.isOnOff();
         }
     }
     void Gooal()
@@ -89,5 +81,13 @@ public class P_1 : MonoBehaviour
         {
 
         }
+    }
+    void left()
+    {
+        transform.Translate(-0.0305f, 0f, 0f);
+    }
+    void right()
+    {
+        transform.Translate(0.0305f, 0f, 0f);
     }
 }
