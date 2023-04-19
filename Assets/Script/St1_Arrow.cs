@@ -7,9 +7,13 @@ public class St1_Arrow : MonoBehaviour
 {
     [SerializeField] GameObject Arrow_Prefab;
     [SerializeField] Transform MPos;
-    [SerializeField] TextMeshProUGUI text;
+    [SerializeField] TextMeshProUGUI text_arrow;
+    [SerializeField] TextMeshProUGUI text_trap;
+    [SerializeField] GameObject Trap_Prefab;
     public static bool isshoot = true;
+    public static bool istrap = true;
     public static St1_Arrow Instance;
+    
     // Start is called before the first frame update
     private void Awake()
     {
@@ -26,6 +30,10 @@ public class St1_Arrow : MonoBehaviour
         {
             Shoot();
         }
+        if (Input.GetMouseButtonDown(1) && istrap)
+        {
+            TrapOn();
+        }
     }
     void Shoot()
     {
@@ -36,13 +44,40 @@ public class St1_Arrow : MonoBehaviour
     }
     IEnumerator Shootis()
     {
-        text.text = "Arrow - Loading";
+        text_arrow.text = "Arrow - Loading";
         yield return new WaitForSeconds(0.5f);
-        text.text = "Arrow - Load";
+        text_arrow.text = "Arrow - Load";
         isshoot = true;
     }
     public static void isOnOff()
     {
         isshoot = false;
+    }
+    void TrapOn()
+    {
+        if (istrap)
+        {
+            Debug.Log("qwd");
+            Trap_Prefab.GetComponent<Trap>().trapUp();
+            StartCoroutine("_trap");
+            StartCoroutine("down_trap");
+            istrap = false;
+        }
+    }
+    IEnumerator _trap()
+    {
+        text_trap.text = "Trap_Loading";
+        yield return new WaitForSeconds(3f);
+        text_trap.text = "Trap_Load";
+        istrap = true;
+    }
+    IEnumerator down_trap()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Trap_Prefab.GetComponent<Trap>().trapDown();
+    }
+    public static void trapOff()
+    {
+        istrap = false;
     }
 }

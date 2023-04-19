@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Trap : MonoBehaviour
 {
-    [SerializeField] GameObject trap_a;
-    [SerializeField] Transform trap_Pos;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,25 +16,17 @@ public class Trap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        trapUp();
     }
-    private void OnTriggerStay2D(Collider2D col)
+    public void trapUp()
     {
-        Debug.Log(col.gameObject);
-        if (col.gameObject.tag == "M_Pos")
-        {
-            Debug.Log("wwww");
-        }
-        if (col.gameObject.tag == "M_Pos" && Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("qwdd");
-            GameObject _trap = Instantiate(trap_a, trap_Pos);
-            StartCoroutine("istrap");
-            Destroy(_trap);
-        }
+        Debug.Log("sssss");
+        transform.Translate(2, 0, 0);
     }
-    IEnumerator istrap()
+    public void trapDown()
     {
-        yield return new WaitForSeconds(1f);
+        Debug.Log("wwwww");
+        transform.Translate(-2, 0, 0);
     }
+    
 }

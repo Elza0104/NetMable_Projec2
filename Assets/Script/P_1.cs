@@ -8,12 +8,12 @@ public class P_1 : MonoBehaviour
     Rigidbody2D rig;
     private bool isTERRA = true;
     [SerializeField] GameObject arrow;
-    [SerializeField] TextMeshProUGUI text;
+    [SerializeField] GameObject trap;
     [SerializeField] GameObject Goal;
     [SerializeField] GameObject grave;
     [SerializeField] Transform grave_Pos;
     [SerializeField] TextMeshProUGUI load;
-    [SerializeField] GameObject trap;
+    [SerializeField] TextMeshProUGUI text;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -61,33 +61,17 @@ public class P_1 : MonoBehaviour
             Gooal();
             Destroy(gameObject);
             Destroy(load);
-            St1_Arrow.isOnOff();
         }
     }
+    void EndPage()
+    {
+        St1_Arrow.isOnOff();
+        St1_Arrow.trapOff();
+    } 
     void Gooal()
     {
         GameObject Dead = Instantiate(grave);
         Dead.transform.position = grave_Pos.position;
         text.text = "Player 1 WIN";
-    }
-    IEnumerator Stage1Move()
-    {
-        text.text = "3";
-        yield return new WaitForSeconds(1f);
-        text.text = "2";
-        yield return new WaitForSeconds(1f);
-        text.text = "1";
-        for (; ; new WaitForSeconds(1f))
-        {
-
-        }
-    }
-    void left()
-    {
-        transform.Translate(-0.0305f, 0f, 0f);
-    }
-    void right()
-    {
-        transform.Translate(0.0305f, 0f, 0f);
     }
 }
