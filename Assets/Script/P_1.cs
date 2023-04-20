@@ -7,13 +7,15 @@ public class P_1 : MonoBehaviour
 {
     Rigidbody2D rig;
     private bool isTERRA = true;
-    [SerializeField] GameObject arrow;
-    [SerializeField] GameObject trap;
+    public float spawn_x;
+    public float spawn_y;
+    public float spawn_Z;
+    [SerializeField] GameObject Player;
+    [SerializeField] GameObject Stage;
     [SerializeField] GameObject Goal;
-    [SerializeField] GameObject grave;
-    [SerializeField] Transform grave_Pos;
     [SerializeField] TextMeshProUGUI load;
     [SerializeField] TextMeshProUGUI text;
+
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -23,15 +25,21 @@ public class P_1 : MonoBehaviour
         SelfMove();
         jump();
     }
+    public void ReSpawn()
+    {
+        transform.position = new Vector2(spawn_x, spawn_y);
+        text.text = "";
+        Goal.SetActive(true);
+    }
     void SelfMove()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(-0.0305f, 0f, 0f);
+            transform.Translate(-0.0455f, 0, 0);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(0.0305f, 0f, 0f);
+            transform.Translate(0.0455f, 0, 0);
         }
     }
     private void jump()
@@ -51,27 +59,18 @@ public class P_1 : MonoBehaviour
         }
         if (collision.gameObject.tag == "Arrow" || collision.gameObject.tag == "Narak")
         {
-            Destroy(gameObject);
-            text.text = "Success";
+
+            transform.position = new Vector2(spawn_x, spawn_y);
+            
+            text.text = "Fail";
         }
         if (collision.gameObject.tag == "Goal")
         {
-            text.text = "Failed";
-            Destroy(Goal);
-            Gooal();
-            Destroy(gameObject);
-            Destroy(load);
+            Goal.SetActive(false);
+            text.text = "Player 1 WIN";
+            Player.SetActive(false);
+            load.text = "";
+            Stage.GetComponent<Stage>().EndPage();
         }
-    }
-    void EndPage()
-    {
-        St1_Arrow.isOnOff();
-        //St1_Arrow.trapOff();
-    } 
-    void Gooal()
-    {
-        GameObject Dead = Instantiate(grave);
-        Dead.transform.position = grave_Pos.position;
-        text.text = "Player 1 WIN";
     }
 }

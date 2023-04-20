@@ -16,17 +16,17 @@ public class Trap : MonoBehaviour
     IEnumerator Start_trap()
     {
         yield return new WaitForSeconds(4);
-        GetComponent<Transform>().Translate(2, 0, 0);
+        GetComponent<Transform>().Translate(0, 2f, 0);
         StartCoroutine("down_trap");
         StartCoroutine("Start_trap");
     }
     IEnumerator down_trap()
     {
         yield return new WaitForSeconds(0.5f);
-        transform.Translate(-2, 0, 0);
+        transform.Translate(0, -2f, 0);
     }
-    public static void trapOff()
+    public void trapOff()
     {
-        
+
     }
 }

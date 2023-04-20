@@ -8,13 +8,10 @@ public class St1_Arrow : MonoBehaviour
     [SerializeField] GameObject Arrow_Prefab;
     [SerializeField] Transform MPos;
     [SerializeField] TextMeshProUGUI text_arrow;
-    [SerializeField] TextMeshProUGUI text_trap;
     public static bool isshoot = true;
     public static St1_Arrow Instance;
     public int Arrow_y;
     public float Arrow_cooltime;
-
-    // Start is called before the first frame update
     private void Awake()
     {
         if (Instance == null)
@@ -22,8 +19,6 @@ public class St1_Arrow : MonoBehaviour
             Instance = this;
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && isshoot)
@@ -45,16 +40,12 @@ public class St1_Arrow : MonoBehaviour
         text_arrow.text = "Arrow - Load";
         isshoot = true;
     }
-    public static void isOnOff()
+    public static void isOff()
     {
         isshoot = false;
     }
-    public void TrapUp_text()
+    public static void isOn()
     {
-        text_trap.text = "Trap - Loading";
-    }
-    public void TrapDown_text()
-    {
-        text_trap.text = "Trap - Load";
+        isshoot = true;
     }
 }
