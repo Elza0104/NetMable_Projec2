@@ -9,11 +9,11 @@ public class St1_Arrow : MonoBehaviour
     [SerializeField] Transform MPos;
     [SerializeField] TextMeshProUGUI text_arrow;
     [SerializeField] TextMeshProUGUI text_trap;
-    [SerializeField] GameObject Trap_Prefab;
     public static bool isshoot = true;
-    public static bool istrap = true;
     public static St1_Arrow Instance;
-    
+    public int Arrow_y;
+    public float Arrow_cooltime;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -30,22 +30,18 @@ public class St1_Arrow : MonoBehaviour
         {
             Shoot();
         }
-        if (Input.GetMouseButtonDown(1) && istrap)
-        {
-            TrapOn();
-        }
     }
     void Shoot()
     {
         GameObject Arrow = Instantiate(Arrow_Prefab);
-        Arrow.transform.position = new Vector3(MPos.position.x, 15, MPos.position.z);
+        Arrow.transform.position = new Vector3(MPos.position.x, Arrow_y, MPos.position.z);
         isshoot = false;
         StartCoroutine("Shootis");
     }
     IEnumerator Shootis()
     {
         text_arrow.text = "Arrow - Loading";
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(Arrow_cooltime);
         text_arrow.text = "Arrow - Load";
         isshoot = true;
     }
@@ -53,31 +49,12 @@ public class St1_Arrow : MonoBehaviour
     {
         isshoot = false;
     }
-    void TrapOn()
+    public void TrapUp_text()
     {
-        if (istrap)
-        {
-            Debug.Log("qwd");
-            Trap_Prefab.GetComponent<Trap>().trapUp();
-            StartCoroutine("_trap");
-            StartCoroutine("down_trap");
-            istrap = false;
-        }
+        text_trap.text = "Trap - Loading";
     }
-    IEnumerator _trap()
+    public void TrapDown_text()
     {
-        text_trap.text = "Trap_Loading";
-        yield return new WaitForSeconds(3f);
-        text_trap.text = "Trap_Load";
-        istrap = true;
-    }
-    IEnumerator down_trap()
-    {
-        yield return new WaitForSeconds(0.5f);
-        Trap_Prefab.GetComponent<Trap>().trapDown();
-    }
-    public static void trapOff()
-    {
-        istrap = false;
+        text_trap.text = "Trap - Load";
     }
 }

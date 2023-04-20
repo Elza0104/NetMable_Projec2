@@ -66,7 +66,7 @@ public class P_1 : MonoBehaviour
     void EndPage()
     {
         St1_Arrow.isOnOff();
-        St1_Arrow.trapOff();
+        //St1_Arrow.trapOff();
     } 
     void Gooal()
     {

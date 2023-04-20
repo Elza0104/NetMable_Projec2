@@ -5,28 +5,28 @@ using TMPro;
 
 public class Trap : MonoBehaviour
 {
-    
-    
-    // Start is called before the first frame update
     void Start()
+    {
+        StartCoroutine("Start_trap");
+    }
+    void Update()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    IEnumerator Start_trap()
     {
-        trapUp();
+        yield return new WaitForSeconds(4);
+        GetComponent<Transform>().Translate(2, 0, 0);
+        StartCoroutine("down_trap");
+        StartCoroutine("Start_trap");
     }
-    public void trapUp()
+    IEnumerator down_trap()
     {
-        Debug.Log("sssss");
-        transform.Translate(2, 0, 0);
-    }
-    public void trapDown()
-    {
-        Debug.Log("wwwww");
+        yield return new WaitForSeconds(0.5f);
         transform.Translate(-2, 0, 0);
     }
-    
+    public static void trapOff()
+    {
+        
+    }
 }
