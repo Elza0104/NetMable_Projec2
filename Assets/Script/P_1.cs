@@ -15,7 +15,7 @@ public class P_1 : MonoBehaviour
     [SerializeField] GameObject Goal;
     [SerializeField] TextMeshProUGUI load;
     [SerializeField] TextMeshProUGUI text;
-
+    
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
