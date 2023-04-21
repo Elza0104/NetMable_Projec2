@@ -221,6 +221,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: MID_Text
       objectReference: {fileID: 0}
+    - target: {fileID: 4705796541411283596, guid: 76c3c22f7f8d76840a7ace6475387e93, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705796541411283596, guid: 76c3c22f7f8d76840a7ace6475387e93, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705796541411283596, guid: 76c3c22f7f8d76840a7ace6475387e93, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4705796541411283597, guid: 76c3c22f7f8d76840a7ace6475387e93, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -783,6 +795,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5479434555593664345, guid: aa9eefd5f66c6f4478844b5a899c576f, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479434555593664345, guid: aa9eefd5f66c6f4478844b5a899c576f, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479434555593664345, guid: aa9eefd5f66c6f4478844b5a899c576f, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479434555593664345, guid: aa9eefd5f66c6f4478844b5a899c576f, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 5479434555593664347, guid: aa9eefd5f66c6f4478844b5a899c576f, type: 3}
       propertyPath: m_Name
       value: RIGHT_Text
@@ -1046,7 +1074,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &974714017
 RectTransform:
@@ -1491,6 +1519,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6925611229492159174, guid: 53490fd9b27ee714eb491b8006f53975, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925611229492159174, guid: 53490fd9b27ee714eb491b8006f53975, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925611229492159174, guid: 53490fd9b27ee714eb491b8006f53975, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53490fd9b27ee714eb491b8006f53975, type: 3}
 --- !u!4 &1392427726 stripped
@@ -1629,16 +1669,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4738222607092632645, guid: 49e5fb746615f0640b59b966bd821325, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.062125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738222607092632645, guid: 49e5fb746615f0640b59b966bd821325, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.074056
       objectReference: {fileID: 0}
     - target: {fileID: 4738222607092632645, guid: 49e5fb746615f0640b59b966bd821325, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.877514
+      value: -3.27
       objectReference: {fileID: 0}
     - target: {fileID: 4738222607092632645, guid: 49e5fb746615f0640b59b966bd821325, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.539372
+      value: -4.23
       objectReference: {fileID: 0}
     - target: {fileID: 4738222607092632645, guid: 49e5fb746615f0640b59b966bd821325, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1697,7 +1741,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 607226124852267104, guid: 1baa3da267bbaf3419e206ed0984814a, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 607226124852267105, guid: 1baa3da267bbaf3419e206ed0984814a, type: 3}
       propertyPath: m_Name
@@ -1709,11 +1753,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 607226124852267107, guid: 1baa3da267bbaf3419e206ed0984814a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.875866
+      value: -3.64
       objectReference: {fileID: 0}
     - target: {fileID: 607226124852267107, guid: 1baa3da267bbaf3419e206ed0984814a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.012272
+      value: -6.7
       objectReference: {fileID: 0}
     - target: {fileID: 607226124852267107, guid: 1baa3da267bbaf3419e206ed0984814a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1801,7 +1845,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.81036353, g: 0.8396226, b: 0.4237718, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1650300346027096320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.25, y: 1.7, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
+  m_LocalScale: {x: 0.09, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -149,11 +149,8 @@ MonoBehaviour:
   spawn_x: 0
   spawn_y: 0
   spawn_Z: 0
-  Stage_2: {fileID: 0}
-  arrow: {fileID: 0}
-  trap: {fileID: 0}
+  Player: {fileID: 0}
+  Stage: {fileID: 0}
   Goal: {fileID: 0}
-  grave: {fileID: 6013208175037350978, guid: 21ce0e5da5aeef24981e4f5adcd3faa5, type: 3}
-  grave_Pos: {fileID: 1650300346027096324}
   load: {fileID: 0}
   text: {fileID: 0}

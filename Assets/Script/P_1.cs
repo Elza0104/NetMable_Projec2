@@ -35,11 +35,11 @@ public class P_1 : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(-0.0455f, 0, 0);
+            transform.Translate(-0.0355f, 0, 0);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(0.0455f, 0, 0);
+            transform.Translate(0.0355f, 0, 0);
         }
     }
     private void jump()
@@ -59,10 +59,9 @@ public class P_1 : MonoBehaviour
         }
         if (collision.gameObject.tag == "Arrow" || collision.gameObject.tag == "Narak")
         {
-
             transform.position = new Vector2(spawn_x, spawn_y);
-            
             text.text = "Fail";
+            StartCoroutine("Failturm");
         }
         if (collision.gameObject.tag == "Goal")
         {
@@ -72,5 +71,11 @@ public class P_1 : MonoBehaviour
             load.text = "";
             Stage.GetComponent<Stage>().EndPage();
         }
+    }
+
+    IEnumerator Failturm()
+    {
+        yield return new WaitForSeconds(1f);
+        text.text = "";
     }
 }
