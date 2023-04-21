@@ -35,11 +35,11 @@ public class P_1 : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(-0.0355f, 0, 0);
+            transform.Translate(-0.0355f, 0, 0 * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(0.0355f, 0, 0);
+            transform.Translate(0.0355f, 0, 0 * Time.deltaTime);
         }
     }
     private void jump()

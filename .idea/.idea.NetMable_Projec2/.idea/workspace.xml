@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45969d76-ac8b-434b-aae1-9a2915fc0b8c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Goal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Goal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/P_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/P_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage_3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NetMable_Projec2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetMable_Projec2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/P_1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/P_1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +85,7 @@
       <updated>1681884973594</updated>
       <workItem from="1681884977765" duration="654000" />
       <workItem from="1681947037069" duration="1560000" />
-      <workItem from="1682033537138" duration="4415000" />
+      <workItem from="1682033537138" duration="4445000" />
     </task>
     <servers />
   </component>
