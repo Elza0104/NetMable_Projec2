@@ -18,6 +18,7 @@ public class St1_Arrow : MonoBehaviour
         {
             Instance = this;
         }
+        isshoot = true;
     }
     void Update()
     {

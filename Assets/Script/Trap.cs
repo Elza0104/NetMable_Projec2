@@ -9,10 +9,6 @@ public class Trap : MonoBehaviour
     {
         StartCoroutine("Start_trap");
     }
-    void Update()
-    {
-        
-    }
     IEnumerator Start_trap()
     {
         yield return new WaitForSeconds(4);
@@ -24,9 +20,5 @@ public class Trap : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         transform.Translate(0, -2f, 0);
-    }
-    public void trapOff()
-    {
-
     }
 }

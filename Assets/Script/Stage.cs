@@ -34,10 +34,6 @@ public class Stage : MonoBehaviour
         button_Reset.SetActive(true);
         button_Scene.SetActive(true);
     }
-    public void End()
-    {
-
-    }
     public void To2()
     {
         SceneManager.LoadScene("Stage_2");
@@ -45,5 +41,9 @@ public class Stage : MonoBehaviour
     public void To3()
     {
         SceneManager.LoadScene("Stage_3");
+    }
+    public void To0()
+    {
+        SceneManager.LoadScene("StartScene");
     }
 }
