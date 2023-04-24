@@ -307,6 +307,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0a0e7a894459ba4ab29ef73ac5021ee, type: 3}
+--- !u!1 &496890772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3830460674386387587, guid: d1b4d5cd4c380524cbaad9f8a7d6a786, type: 3}
+  m_PrefabInstance: {fileID: 3830460675093369215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &738403050 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5261112249030702810, guid: 61262d6bf66c73a4a99327dc9fccb625, type: 3}
@@ -933,6 +938,14 @@ PrefabInstance:
       propertyPath: spawn_y
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1650300346027096325, guid: 17aeea19523e4644388b491f37f9ab4d, type: 3}
+      propertyPath: Mid_text
+      value: 
+      objectReference: {fileID: 2116979913}
+    - target: {fileID: 1650300346027096325, guid: 17aeea19523e4644388b491f37f9ab4d, type: 3}
+      propertyPath: Load_text
+      value: 
+      objectReference: {fileID: 2019926303}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17aeea19523e4644388b491f37f9ab4d, type: 3}
 --- !u!1 &1976982569 stripped
@@ -1238,6 +1251,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 237776175019830285, guid: fbb6d080defb18a4396d3da9c2f3d722, type: 3}
+      propertyPath: Arrow
+      value: 
+      objectReference: {fileID: 496890772}
+    - target: {fileID: 237776175019830285, guid: fbb6d080defb18a4396d3da9c2f3d722, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 1155925784}
@@ -1319,6 +1336,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 2019926303}
+    - target: {fileID: 3830460674386387584, guid: d1b4d5cd4c380524cbaad9f8a7d6a786, type: 3}
+      propertyPath: M_Pos
+      value: 
+      objectReference: {fileID: 3830460675093369216}
     - target: {fileID: 3830460674386387584, guid: d1b4d5cd4c380524cbaad9f8a7d6a786, type: 3}
       propertyPath: Arrow_y
       value: 20
@@ -1421,6 +1442,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1b4d5cd4c380524cbaad9f8a7d6a786, type: 3}
+--- !u!224 &3830460675093369216 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3830460674386388349, guid: d1b4d5cd4c380524cbaad9f8a7d6a786, type: 3}
+  m_PrefabInstance: {fileID: 3830460675093369215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4705796542319713861
 PrefabInstance:
   m_ObjectHideFlags: 0

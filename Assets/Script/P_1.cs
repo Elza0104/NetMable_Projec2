@@ -12,9 +12,8 @@ public class P_1 : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject stage;
     [SerializeField] GameObject goal;
-    [SerializeField] TextMeshProUGUI load;
-    [SerializeField] TextMeshProUGUI text;
-    
+    [SerializeField] TextMeshProUGUI Load_text;
+    [SerializeField] TextMeshProUGUI Mid_text;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -23,12 +22,6 @@ public class P_1 : MonoBehaviour
     {
         Move();
         jump();
-    }
-    public void ReSpawn()
-    {
-        transform.position = new Vector2(spawn_x, spawn_y);
-        text.text = "";
-        goal.SetActive(true);
     }
     void Move()
     {
@@ -43,11 +36,18 @@ public class P_1 : MonoBehaviour
     }
     private void jump()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isTERRA || Input.GetKeyDown(KeyCode.Space) && isTERRA)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isTERRA || 
+            Input.GetKeyDown(KeyCode.Space) && isTERRA)
         {
-            rig.AddForce(Vector2.up * 700f, ForceMode2D.Force);
+            rig.AddForce(Vector2.up * 700f);
             isTERRA = false;
         }
+    }
+    public void ReSpawn()
+    {
+        transform.position = new Vector2(spawn_x, spawn_y);
+        Mid_text.text = "";
+        goal.SetActive(true);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     { 
@@ -55,24 +55,25 @@ public class P_1 : MonoBehaviour
         {
             isTERRA = true;
         }
-        if (collision.gameObject.tag == "Arrow" || collision.gameObject.tag == "Narak")
+        if (collision.gameObject.tag == "Arrow" || 
+            collision.gameObject.tag == "Narak")
         {
             transform.position = new Vector2(spawn_x, spawn_y);
-            text.text = "Fail";
+            Mid_text.text = "Fail";
             StartCoroutine("Failturm");
         }
         if (collision.gameObject.tag == "Goal")
         {
             goal.SetActive(false);
             player.SetActive(false);
-            text.text = "Player 1 WIN";
-            load.text = "";
+            Mid_text.text = "Clear";
+            Load_text.text = "";
             stage.GetComponent<Stage>().EndPage();
         }
     }
     IEnumerator Failturm()
     {
         yield return new WaitForSeconds(1f);
-        text.text = "";
+        Mid_text.text = "";
     }
 }

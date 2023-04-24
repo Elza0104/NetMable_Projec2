@@ -895,6 +895,14 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1650300346027096325, guid: 17aeea19523e4644388b491f37f9ab4d, type: 3}
+      propertyPath: Mid_text
+      value: 
+      objectReference: {fileID: 1410118738}
+    - target: {fileID: 1650300346027096325, guid: 17aeea19523e4644388b491f37f9ab4d, type: 3}
+      propertyPath: Load_text
+      value: 
+      objectReference: {fileID: 1831512686}
+    - target: {fileID: 1650300346027096325, guid: 17aeea19523e4644388b491f37f9ab4d, type: 3}
       propertyPath: grave_Pos
       value: 
       objectReference: {fileID: 616183583}
@@ -1979,6 +1987,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3830460674386387584, guid: d1b4d5cd4c380524cbaad9f8a7d6a786, type: 3}
+      propertyPath: M_Pos
+      value: 
+      objectReference: {fileID: 1598110476}
+    - target: {fileID: 3830460674386387584, guid: d1b4d5cd4c380524cbaad9f8a7d6a786, type: 3}
       propertyPath: Arrow_y
       value: 25
       objectReference: {fileID: 0}
@@ -2088,6 +2100,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1b4d5cd4c380524cbaad9f8a7d6a786, type: 3}
+--- !u!224 &1598110476 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3830460674386388349, guid: d1b4d5cd4c380524cbaad9f8a7d6a786, type: 3}
+  m_PrefabInstance: {fileID: 1598110475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1598110477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3830460674386387587, guid: d1b4d5cd4c380524cbaad9f8a7d6a786, type: 3}
+  m_PrefabInstance: {fileID: 1598110475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1650615570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2918,6 +2940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stage_M
       objectReference: {fileID: 0}
+    - target: {fileID: 6059070734920575581, guid: 9ae4be83071bd834f82e906a83108d3c, type: 3}
+      propertyPath: Arrow
+      value: 
+      objectReference: {fileID: 1598110477}
     - target: {fileID: 6059070734920575581, guid: 9ae4be83071bd834f82e906a83108d3c, type: 3}
       propertyPath: Player
       value: 

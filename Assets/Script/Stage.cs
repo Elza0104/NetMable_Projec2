@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Stage : MonoBehaviour
 {
     [SerializeField] GameObject Player;
+    [SerializeField] GameObject Arrow;
     [SerializeField] GameObject button_Reset;
     [SerializeField] GameObject button_Scene;
     private void Start()
@@ -14,12 +15,12 @@ public class Stage : MonoBehaviour
     }
     public void EndPage()
     {
-        St1_Arrow.isOff();
+        Arrow.GetComponent<St1_Arrow>().isOff();
         button();
     }
     public void ResetPage()
     {
-        St1_Arrow.isOn();
+        Arrow.GetComponent<St1_Arrow>().isOn();
         buttonOff();
         Player.SetActive(true);
         Player.GetComponent<P_1>().ReSpawn();

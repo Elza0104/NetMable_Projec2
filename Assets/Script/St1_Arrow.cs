@@ -6,18 +6,13 @@ using TMPro;
 public class St1_Arrow : MonoBehaviour
 {
     [SerializeField] GameObject Arrow_Prefab;
-    [SerializeField] Transform MPos;
+    [SerializeField] Transform M_Pos;
     [SerializeField] TextMeshProUGUI text_arrow;
-    public static bool isshoot = true;
-    public static St1_Arrow Instance;
+    public bool isshoot = true;
     public int Arrow_y;
     public float Arrow_cooltime;
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
         isshoot = true;
     }
     void Update()
@@ -30,8 +25,8 @@ public class St1_Arrow : MonoBehaviour
     void Shoot()
     {
         GameObject Arrow = Instantiate(Arrow_Prefab);
-        Arrow.transform.position = new Vector3(MPos.position.x, Arrow_y, MPos.position.z);
-        isshoot = false;
+        Arrow.transform.position = new Vector2(M_Pos.position.x, Arrow_y);
+        isOff();
         StartCoroutine("Shootis");
     }
     IEnumerator Shootis()
@@ -39,13 +34,13 @@ public class St1_Arrow : MonoBehaviour
         text_arrow.text = "Arrow - Loading";
         yield return new WaitForSeconds(Arrow_cooltime);
         text_arrow.text = "Arrow - Load";
-        isshoot = true;
+        isOn();
     }
-    public static void isOff()
+    public void isOff()
     {
         isshoot = false;
     }
-    public static void isOn()
+    public void isOn()
     {
         isshoot = true;
     }

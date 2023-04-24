@@ -7,11 +7,18 @@ public class Trap : MonoBehaviour
 {
     void Start()
     {
+        StartCoroutine("Ready_trap");
+    }
+    IEnumerator Ready_trap()
+    {
+        yield return new WaitForSeconds(1);
+        GetComponent<Transform>().Translate(0, 2f, 0);
+        StartCoroutine("down_trap");
         StartCoroutine("Start_trap");
     }
     IEnumerator Start_trap()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
         GetComponent<Transform>().Translate(0, 2f, 0);
         StartCoroutine("down_trap");
         StartCoroutine("Start_trap");
