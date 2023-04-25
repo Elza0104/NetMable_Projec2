@@ -8,16 +8,16 @@ public class St1_Arrow : MonoBehaviour
     [SerializeField] GameObject Arrow_Prefab;
     [SerializeField] Transform M_Pos;
     [SerializeField] TextMeshProUGUI text_arrow;
-    public bool isshoot = true;
-    public int Arrow_y;
-    public float Arrow_cooltime;
+    [SerializeField] bool isShoot;
+    [SerializeField] int Arrow_y;
+    [SerializeField] float Arrow_cooltime;
     private void Awake()
     {
-        isshoot = true;
+        isShoot = true;
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isshoot)
+        if (Input.GetMouseButtonDown(0) && isShoot)
         {
             Shoot();
         }
@@ -38,10 +38,10 @@ public class St1_Arrow : MonoBehaviour
     }
     public void isOff()
     {
-        isshoot = false;
+        isShoot = false;
     }
     public void isOn()
     {
-        isshoot = true;
+        isShoot = true;
     }
 }

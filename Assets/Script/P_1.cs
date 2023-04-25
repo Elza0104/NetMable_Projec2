@@ -5,10 +5,11 @@ using TMPro;
 
 public class P_1 : MonoBehaviour
 {
-    Rigidbody2D rig;
+    private Rigidbody2D rig;
     private bool isTERRA = true;
-    public float spawn_x;
-    public float spawn_y;
+    [SerializeField] float spawn_x;
+    [SerializeField] float spawn_y;
+    [SerializeField] float speed = 10f;
     [SerializeField] GameObject player;
     [SerializeField] GameObject stage;
     [SerializeField] GameObject goal;
@@ -21,20 +22,20 @@ public class P_1 : MonoBehaviour
     void Update()
     {
         Move();
-        jump();
+        Jump();
     }
-    void Move()
+    private void Move()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(-0.1555f, 0, 0 * Time.deltaTime);
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(0.1555f, 0, 0 * Time.deltaTime);
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
     }
-    private void jump()
+    private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow) && isTERRA || 
             Input.GetKeyDown(KeyCode.Space) && isTERRA)

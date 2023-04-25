@@ -12,18 +12,18 @@ public class Trap : MonoBehaviour
     IEnumerator Ready_trap()
     {
         yield return new WaitForSeconds(1);
-        GetComponent<Transform>().Translate(0, 2f, 0);
-        StartCoroutine("down_trap");
+        transform.Translate(0, 2f, 0);
+        StartCoroutine("Down_trap");
         StartCoroutine("Start_trap");
     }
     IEnumerator Start_trap()
     {
         yield return new WaitForSeconds(3);
-        GetComponent<Transform>().Translate(0, 2f, 0);
-        StartCoroutine("down_trap");
+        transform.Translate(0, 2f, 0);
+        StartCoroutine("Down_trap");
         StartCoroutine("Start_trap");
     }
-    IEnumerator down_trap()
+    IEnumerator Down_trap()
     {
         yield return new WaitForSeconds(0.5f);
         transform.Translate(0, -2f, 0);
