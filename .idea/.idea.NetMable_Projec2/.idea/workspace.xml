@@ -6,14 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="45969d76-ac8b-434b-aae1-9a2915fc0b8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NetMable_Projec2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetMable_Projec2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Goal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Goal.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/P_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/P_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage_3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/P_1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/P_1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Reset.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Reset.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/St1_Arrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/St1_Arrow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Trap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Trap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Archer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Archer.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Arrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Warrior.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Warrior.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/baekBunny_2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/baekBunny_2.gif.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +98,7 @@
       <workItem from="1682033537138" duration="5472000" />
       <workItem from="1682388728272" duration="1852000" />
       <workItem from="1682406896778" duration="1702000" />
+      <workItem from="1682486290214" duration="2624000" />
     </task>
     <servers />
   </component>

@@ -42,6 +42,7 @@ public class P_1 : MonoBehaviour
         {
             rig.AddForce(Vector2.up * 700f);
             isTERRA = false;
+            GetComponent<AudioSource>().Play();
         }
     }
     public void ReSpawn()
@@ -65,6 +66,7 @@ public class P_1 : MonoBehaviour
         }
         if (collision.gameObject.tag == "Goal")
         {
+            Debug.Log("GOAL!");
             goal.SetActive(false);
             player.SetActive(false);
             Mid_text.text = "Clear";
