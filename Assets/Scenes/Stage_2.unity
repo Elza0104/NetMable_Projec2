@@ -230,11 +230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5808201415151758354, guid: 57c4d3b56b5edeb4e86a01bd01e99ce3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.2431
+      value: 43.11
       objectReference: {fileID: 0}
     - target: {fileID: 5808201415151758354, guid: 57c4d3b56b5edeb4e86a01bd01e99ce3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.47
+      value: -20.97
       objectReference: {fileID: 0}
     - target: {fileID: 5808201415151758354, guid: 57c4d3b56b5edeb4e86a01bd01e99ce3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -999,6 +999,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 1810363489}
+    - target: {fileID: 1650300346027096325, guid: 17aeea19523e4644388b491f37f9ab4d, type: 3}
+      propertyPath: GoalS
+      value: 
+      objectReference: {fileID: 1568568823}
     - target: {fileID: 1650300346027096325, guid: 17aeea19523e4644388b491f37f9ab4d, type: 3}
       propertyPath: Stage
       value: 
@@ -1866,6 +1870,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4738222607092632645, guid: 49e5fb746615f0640b59b966bd821325, type: 3}
   m_PrefabInstance: {fileID: 1498123848}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1568568822
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 112945720585620824, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 112945720585620824, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.598824
+      objectReference: {fileID: 0}
+    - target: {fileID: 112945720585620824, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.05434
+      objectReference: {fileID: 0}
+    - target: {fileID: 112945720585620824, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.010991413
+      objectReference: {fileID: 0}
+    - target: {fileID: 112945720585620824, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 112945720585620824, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 112945720585620824, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 112945720585620824, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 112945720585620824, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 112945720585620824, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 112945720585620824, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255647649609080653, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+      propertyPath: m_Name
+      value: Success
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+--- !u!1 &1568568823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1255647649609080653, guid: 87ae3ba01e0cb1a4895a570d813eefe0, type: 3}
+  m_PrefabInstance: {fileID: 1568568822}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1577710075 stripped
 GameObject:

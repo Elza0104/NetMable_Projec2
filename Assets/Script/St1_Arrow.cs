@@ -26,6 +26,7 @@ public class St1_Arrow : MonoBehaviour
     {
         GameObject Arrow = Instantiate(Arrow_Prefab);
         Arrow.transform.position = new Vector2(M_Pos.position.x, Arrow_y);
+        GetComponent<AudioSource>().Play();
         isOff();
         StartCoroutine("Shootis");
     }

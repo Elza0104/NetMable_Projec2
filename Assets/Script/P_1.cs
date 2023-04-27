@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,10 @@ using TMPro;
 
 public class P_1 : MonoBehaviour
 {
+    Animator Anime;
     private Rigidbody2D rig;
     private bool isTERRA = true;
+    private bool isMove;
     [SerializeField] float spawn_x;
     [SerializeField] float spawn_y;
     [SerializeField] float speed = 10f;
@@ -15,14 +18,25 @@ public class P_1 : MonoBehaviour
     [SerializeField] GameObject goal;
     [SerializeField] TextMeshProUGUI Load_text;
     [SerializeField] TextMeshProUGUI Mid_text;
+    [SerializeField] GameObject GoalS;
+    
+    private void Awake()
+    {
+        Anime = GetComponent<Animator>();
+        isMove = true;
+    }
+
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
     }
     void Update()
     {
-        Move();
-        Jump();
+        if (isMove)
+        {
+            Move();
+            Jump();
+        }
     }
     private void Move()
     {
@@ -34,6 +48,7 @@ public class P_1 : MonoBehaviour
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
+        MoveAni();
     }
     private void Jump()
     {
@@ -43,6 +58,25 @@ public class P_1 : MonoBehaviour
             rig.AddForce(Vector2.up * 700f);
             isTERRA = false;
             GetComponent<AudioSource>().Play();
+        }
+    }
+    void MoveAni()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            BunnyL();
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            BunnyIdle();
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            BunnyR();
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            BunnyIdle();
         }
     }
     public void ReSpawn()
@@ -60,12 +94,15 @@ public class P_1 : MonoBehaviour
         if (collision.gameObject.tag == "Arrow" || 
             collision.gameObject.tag == "Narak")
         {
-            transform.position = new Vector2(spawn_x, spawn_y);
-            Mid_text.text = "Fail";
+            isMove = false;
+            BunnyD();
             StartCoroutine("Failturm");
+            
+            Mid_text.text = "Fail";
         }
         if (collision.gameObject.tag == "Goal")
         {
+            GoalS.GetComponent<Goal>().Goallll();
             Debug.Log("GOAL!");
             goal.SetActive(false);
             player.SetActive(false);
@@ -78,5 +115,26 @@ public class P_1 : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Mid_text.text = "";
+        BunnyIdle();
+        transform.position = new Vector2(spawn_x, spawn_y);
+        isMove = true;
+    }
+
+    public void BunnyIdle()
+    {
+        Anime.SetTrigger("BunnyIdle_t");
+    }
+    public void BunnyD()
+    {
+        Anime.SetTrigger("BunnyD_t");
+    }
+
+    public void BunnyL()
+    {
+        Anime.SetTrigger("BunnyR_t");
+    }
+    public void BunnyR()
+    {
+        Anime.SetTrigger("BunnyL_t");
     }
 }
